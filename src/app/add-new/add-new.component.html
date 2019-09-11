@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-content>
+    <h1>Co chlałeś?</h1>
+    <mat-grid-list cols="4" rowHeight="100px">
+      <mat-grid-tile [colspan]="2" [rowspan]="2" *ngFor="let alcohol of alcohols;">
+        <app-alcohol-details [alcohol]="alcohol"></app-alcohol-details>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-content>
+</mat-card>
+<button class="btn-accept" color="primary" mat-raised-button (click)="add()">Dodaj</button>

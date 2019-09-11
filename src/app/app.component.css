@@ -1,0 +1,14 @@
+.footer {
+  text-align: center;
+  font-size: smaller;
+}
+
+.ribbon{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.container{
+  padding: 0 5px 0 5px;
+  text-align: center;
+  height: 100vh;
+}

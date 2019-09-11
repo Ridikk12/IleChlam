@@ -1,0 +1,20 @@
+<div>
+  <form (ngSubmit)="onSubmit()" #alcoForm="ngForm">
+    <mat-card>
+      <mat-card-content>
+        <div class="add-content" *ngFor="let alcohol of alcohols; first as isFirst">
+          {{alcohol.alcoholType}}
+          <img [src]="alcohol.imgSrc" />
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" type="number" name="alcoholQuantity" class="form-control input-quantity"
+              [(ngModel)]="alcohol.quantity" required placeholder="{{alcohol.alcoholUnit}}..."
+              #alcoholQuantity="ngModel">
+            <mat-error *ngIf="alcoholQuantity.invalid">Wpisz ile trunku wypiłeś!</mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <button class="btn-accept" type="submit" [disabled]="!alcoForm.form.valid" color="primary"
+    mat-raised-button>Zapisz</button>
+  </form>
+</div>

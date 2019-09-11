@@ -1,0 +1,26 @@
+<div class="container">
+  <div *ngIf="auth.users$ | async; then authenticated else guest">
+  </div>
+  <ng-template #guest>
+    <mat-card>
+      <mat-card-content align="center">
+        <h3>Szykuje się chlanie?</h3>
+        <p>Zaloguj się by to uwiecznić </p>
+      </mat-card-content>
+      <mat-card-actions align="center">
+        <button mat-raised-button (click)="auth.googleSignin()">
+          <i class="fa fa-google"></i> Chlej logując się przez Google
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-template>
+  <ng-template #authenticated>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </ng-template>
+</div>
+<!-- <div class="footer">Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a
+    href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
+    href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+</div> -->

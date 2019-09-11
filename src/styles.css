@@ -1,0 +1,12 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.btn-accept{
+    width: 80%;
+    bottom: 0;
+    right: 0;
+}
+
+.mat-card-content{
+    height: 80vh;
+  }
+  

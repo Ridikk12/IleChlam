@@ -1,0 +1,40 @@
+.dot {
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  background-color: lightpink;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+.dot2 {
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  background-color: lightsalmon;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -80px;
+}
+
+.dot-message {
+  position: relative;
+  text-align: center;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+
+table {
+  width: 100%;
+}

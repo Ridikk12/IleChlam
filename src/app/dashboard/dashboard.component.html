@@ -1,0 +1,42 @@
+<mat-tab-group>
+  <mat-tab label="Panel menela">
+    <mat-card>
+      <mat-card-content>
+        <h1> Siema ziomek !</h1>
+        <div class="dot">
+          <div class="dot-message">
+            W tym miesiącu przechlałeś: {{lost}}
+          </div>
+        </div>
+        <div class="dot2">
+          <div class="dot-message">
+            W tym miesiącu wypiłeś <b>{{dashboardService.alcoholStandardDoseSummary}}</b> standardowych dawek alkohol
+          </div>
+        </div>
+        <p>Tak trzymaj!</p>
+      </mat-card-content>
+    </mat-card>
+    <button class="btn-accept" color="primary" mat-raised-button routerLink="/add">Dodaj</button>
+  </mat-tab>
+  <mat-tab label="Historia libacji">
+    <table mat-table [dataSource]="dashboardService.historyDatasource">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="commonUnitValue">
+        <th mat-header-cell *matHeaderCellDef> Przyjęta ilość jednostek alkoholu </th>
+        <td mat-cell *matCellDef="let element"> {{element.commonUnitValue}} </td>
+      </ng-container>
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef> Data chlania </th>
+        <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+  </mat-tab>
+</mat-tab-group>
