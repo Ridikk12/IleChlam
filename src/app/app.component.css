@@ -3,12 +3,36 @@
   font-size: smaller;
 }
 
-.ribbon{
-  padding-top: 10px;
-  padding-bottom: 10px;
+img {
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  float: right;
 }
-.container{
-  padding: 0 5px 0 5px;
+
+.container {
+  font-family: Roboto;
+  margin: 1.5rem;
+  height: 90vh;
+  position: relative;
+
+}
+
+.menu {
+  float: left;
+}
+
+.header-row {
+  overflow: hidden;
+}
+
+.center {
   text-align: center;
-  height: 100vh;
+}
+
+@media (min-width:1025px) {
+  .container {
+    width: 30% !important;
+    margin: auto;
+  }
 }

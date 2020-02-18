@@ -7,7 +7,7 @@ export class Alcohol {
         this.alcoholUnit = unit;
         this.imgSrc = img;
     }
-
+    alcoholName: string;
     alcoholType: AlcoholType;
     alcoholUnit: AlcoholUnit;
     quantity: number;
@@ -21,4 +21,4 @@ export class Alcohol {
 export type AlcoholType =
     'Beer' | 'Wine' | 'Vodka' | 'Other';
 
-export type AlcoholUnit = 'Ml' | 'Tin' | 'Glass';
+export type AlcoholUnit = 'Ml' | 'Puszka' | 'Kieliszek';

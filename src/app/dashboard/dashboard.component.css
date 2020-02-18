@@ -1,40 +1,80 @@
-.dot {
-  align-items: center;
-  height: 200px;
-  width: 200px;
-  background-color: lightpink;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5px;
-}
-
-.dot2 {
-  align-items: center;
-  height: 200px;
-  width: 200px;
-  background-color: lightsalmon;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -80px;
-}
-
-.dot-message {
-  position: relative;
-  text-align: center;
-}
-
-h1,
-p {
-  text-align: center;
-}
-
-
 table {
   width: 100%;
+}
+
+.header-message {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  font-style: normal;
+  font-size: 24px;
+  color: #051277;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.ok {
+  background: #00CC00
+}
+
+.warrning {
+  background: #FFA500;
+}
+
+.problem {
+  background: #FF7F5D;
+}
+
+.rectangle {
+  font-size: 18px;
+  border-radius: 25px;
+  font-style: normal;
+  color: #FFFFFF;
+  padding: 20px;
+  margin-bottom: 3rem;
+}
+
+.info-message {
+  margin-top: 1rem;
+  font-size: 16px;
+}
+
+.important-message{
+  font-weight: bold; 
+  float: left; 
+}
+
+.summary {
+  color: #051277;
+  font-size: 18px;
+}
+
+.rectangle-summary {
+  border-radius: 25px;
+  background: #F9FBFC;
+  flex: 1;
+  padding: 20px;
+  margin: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  text-align: center;
+}
+
+.columns {
+  align-items: center;
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.font-big {
+  font-size: 32px;
+}
+
+.btn-accept {
+  align-self: flex-end;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
 }

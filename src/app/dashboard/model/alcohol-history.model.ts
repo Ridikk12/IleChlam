@@ -6,4 +6,5 @@ export class AlcoholHistory {
     type: AlcoholType;
     commonUnitValue: number;
     date: string;
+    alcoholPrice: number;
 }

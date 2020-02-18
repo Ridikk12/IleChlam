@@ -5,8 +5,6 @@
 /tmp
 /out-tsc
 /public
-.src/environments/environment.prod.ts
-.src/environments/environment.ts
 
 # dependencies
 /node_modules
@@ -50,5 +48,4 @@ Thumbs.db
 .firebaserc
 database.rules.json
 firebase.json
-/environments
-/src/environments
+environments/

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DashboardService } from './dashboard.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,13 +9,14 @@ import { DashboardService } from './dashboard.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(public dashboardService: DashboardService) { }
-  brainCells = 100;
-  lost = '1000 zł';
+  constructor(public auth: AuthService, public dashboardService: DashboardService) { }
   ngOnInit() {
   }
 
-  displayedColumns: string[] = ['commonUnitValue','date'];
+  alcoholUnit: number;
+  alcoholPrice: number;
+
+  displayedColumns: string[] = ['commonUnitValue', 'date'];
 
 
 }

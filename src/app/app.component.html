@@ -1,21 +1,33 @@
-<div class="container">
+<div class="ap">
   <div *ngIf="auth.users$ | async; then authenticated else guest">
   </div>
   <ng-template #guest>
-    <mat-card>
-      <mat-card-content align="center">
-        <h3>Szykuje się chlanie?</h3>
-        <p>Zaloguj się by to uwiecznić </p>
-      </mat-card-content>
-      <mat-card-actions align="center">
-        <button mat-raised-button (click)="auth.googleSignin()">
-          <i class="fa fa-google"></i> Chlej logując się przez Google
-        </button>
-      </mat-card-actions>
-    </mat-card>
+    <div class="container center">
+      <h3>Szykuje się chlanie?</h3>
+      <p>Zaloguj się by to uwiecznić </p>
+      <button mat-raised-button (click)="auth.googleSignin()">
+        <i class="fa fa-google"></i> Chlej logując się przez Google
+      </button>
+    </div>
   </ng-template>
-  <ng-template #authenticated>
-    <div>
+  <ng-template #authenticated let-user>
+    <div class="container">
+      <div class="header-row">
+        <div class="menu">
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/dashboard">
+              <span>Panel menela</span>
+            </button>
+            <button mat-menu-item routerLink="/history">
+              <span>Historia chlania</span>
+            </button>
+          </mat-menu>
+        </div>
+        <div> <img [src]="(auth.users$ | async)?.photoURL"></div>
+      </div>
       <router-outlet></router-outlet>
     </div>
   </ng-template>

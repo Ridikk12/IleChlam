@@ -1,15 +1,24 @@
-
 img {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 50px;
+  height: 50px;
 }
 
-.add-content{
-  justify-content: center;
-  flex-direction: column;
+.img-panel{
   display: flex;
-  text-align: center;
-  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  background: #F9FBFC;
+  border-radius: 25px;
+}
+.img-container{
+ display: flex;
+ justify-content: center;
+}
+
+mat-form-field {
+  width: 100%;
 }

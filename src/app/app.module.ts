@@ -22,6 +22,9 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { MatTableModule } from '@angular/material/table';
     DashboardComponent,
     AddNewComponent,
     AlcoholDetailsComponent,
-    AddQuantityComponent
+    AddQuantityComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +50,8 @@ import { MatTableModule } from '@angular/material/table';
     FormsModule,
     MatTabsModule,
     MatTableModule,
+    MatMenuModule,
+    MatIconModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [AngularFireAuth],
