@@ -22,7 +22,7 @@ export class AddNewComponent implements OnInit {
 
   add() {
     if (this.alcohols.filter(x => x.selected).length === 0) {
-      this.snackBar.open('Select at least one type of alcohol!', null, {
+      this.snackBar.open('Wybierz chodź jeden rodzaj alkoholu.', null, {
         duration: 3000,
         horizontalPosition: 'right'
       });

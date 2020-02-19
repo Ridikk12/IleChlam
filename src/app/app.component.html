@@ -1,4 +1,4 @@
-<div class="ap">
+<div>
   <div *ngIf="auth.users$ | async; then authenticated else guest">
   </div>
   <ng-template #guest>
@@ -26,7 +26,7 @@
             </button>
           </mat-menu>
         </div>
-        <div> <img [src]="(auth.users$ | async)?.photoURL"></div>
+        <div> <img [attr.src]="(auth.users$ | async)?.photoURL"></div>
       </div>
       <router-outlet></router-outlet>
     </div>

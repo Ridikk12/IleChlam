@@ -24,8 +24,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import { HistoryComponent } from './history/history.component';
-
+import {MatMomentDateModule} from '@angular/material-moment-adapter'
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +53,8 @@ import { HistoryComponent } from './history/history.component';
     MatTableModule,
     MatMenuModule,
     MatIconModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [AngularFireAuth],

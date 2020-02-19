@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddNewComponent } from './add-new/add-new.component';
 import { AddQuantityComponent } from './add-new/add-quantity/add-quantity.component';
 import { AppComponent } from './app.component';
+import { HistoryComponent } from './history/history.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,11 @@ const routes: Routes = [
     path: 'quantity',
     component: AddQuantityComponent,
     data: { title: 'Ile chlałeś?' }
+  },
+  {
+    path: 'history',
+    component: HistoryComponent,
+    data: { title: 'Historia chlania' }
   }
 ];
 
