@@ -2,12 +2,22 @@
   <div *ngIf="auth.users$ | async; then authenticated else guest">
   </div>
   <ng-template #guest>
-    <div class="container center">
-      <h3>Szykuje się chlanie?</h3>
-      <p>Zaloguj się by to uwiecznić </p>
-      <button mat-raised-button (click)="auth.googleSignin()">
-        <i class="fa fa-google"></i> Chlej logując się przez Google
-      </button>
+    <div class="container-login center">
+      <div>
+        <img id="imgGuy1" src="assets/images/guy1.svg">
+        <img id="imgGuy2" src="assets/images/guy2.svg">
+      </div>
+      <div class="center">
+        <h3>How much I drink?</h3>
+        <p>Track your...progress and see how your health looks like this summer.</p>
+        <div class="btn-login center">
+          <img src="assets/icons/google.svg">
+          <div (click)="auth.googleSignin()" class="log-in-text">Login with google</div>
+        </div>
+        <!-- <button mat-raised-button (click)="auth.googleSignin()">
+          <i class="fa fa-google btn-login"></i> Login with google
+        </button> -->
+      </div>
     </div>
   </ng-template>
   <ng-template #authenticated let-user>

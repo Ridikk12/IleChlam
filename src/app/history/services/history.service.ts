@@ -16,12 +16,16 @@ export class HistoryService {
     constructor(private authService: AuthService, private angularFireStore: AngularFirestore, private alcoholService: AlcoholStandardDoseService) {
     }
 
-    getHistory(): Observable<AlcoholHistory[]> {
+    history: AlcoholHistory[];
+
+    getHistory(from: Date, to: Date): Observable<AlcoholHistory[]> {
         const user = this.authService.getUser();
         return this.angularFireStore.collection('alcoholDrinkStory', ref => ref
-            .where('date', '<=', new Date())
+            .where('date', '<=', to)
+            .where('date', '>=', from)
             .where('userUid', '==', user.uid)).valueChanges().pipe(map(result => {
-                return result.map((alcohol: Alcohol) => {
+
+                var history = result.map((alcohol: Alcohol) => {
                     const alcoholHistoryModel = new AlcoholHistory();
                     alcoholHistoryModel.commonUnitValue = this.alcoholService.calculateAlcoholDose(alcohol);
                     alcoholHistoryModel.name = alcohol.alcoholType;
@@ -29,6 +33,19 @@ export class HistoryService {
                     alcoholHistoryModel.alcoholPrice = this.alcoholService.calculatePrice(alcohol);
                     return alcoholHistoryModel;
                 });
+                this.history = history;
+                return history;
             }));
     }
+
+
+    calculateAverageDrink(days: number): number {
+        let average = 0;
+        this.history.forEach(x => {
+            average += x.commonUnitValue;
+        });
+
+        return average / days;
+    }
+
 }

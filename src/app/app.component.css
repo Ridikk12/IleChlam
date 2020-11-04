@@ -3,19 +3,48 @@
   font-size: smaller;
 }
 
-img {
-  border-radius: 50%;
-  width: 58px;
-  height: 58px;
+.container-login {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins;
+}
+
+#imgGuy1 {
+  float: left;
+  margin-left: -10px;
+}
+
+#imgGuy2 {
+  margin-top: -200px;
   float: right;
+  margin-right: -10px;
+}
+
+
+.container-login h3 {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 24px;
+}
+
+.container-login p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
 }
 
 .container {
-  font-family: Roboto;
-  margin: 1.5rem;
-  height: 90vh;
-  position: relative;
+  font-family: Poppins;
+  /* margin: 1.5rem; */
+  /* position: absolute; */
+}
 
+.viewport {
+  font-family: Poppins;
+  /* margin: 1.5rem; */
+  height: 90vh;
 }
 
 .menu {
@@ -26,8 +55,32 @@ img {
   overflow: hidden;
 }
 
+.log-in-text {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+
+}
+
 .center {
   text-align: center;
+}
+
+.btn-login {
+  display: flex;
+  background-color: black;
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 56px;
+
+}
+
+.btn-login img {
+  margin-right: 5%;
 }
 
 @media (min-width:1025px) {

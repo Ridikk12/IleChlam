@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddNewComponent } from './add-new/add-new.component';
 import { AlcoholDetailsComponent } from './add-new/alcohol-details/alcohol-details.component';
@@ -22,11 +21,12 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { HistoryComponent } from './history/history.component';
-import {MatMomentDateModule} from '@angular/material-moment-adapter'
+import { MatMomentDateModule } from '@angular/material-moment-adapter'
+import { environment, firebaseConfig } from 'src/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +40,7 @@ import {MatMomentDateModule} from '@angular/material-moment-adapter'
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     MatButtonModule,
     MatCardModule,
